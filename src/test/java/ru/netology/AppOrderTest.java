@@ -13,7 +13,7 @@ public class AppOrderTest {
     @Test
     public void happyPath(){
         open("http://localhost:9999/");
-        SelenideElement form = $(By.tagName("FORM"));
+        SelenideElement form = $("[data-test-id=form]");
         form.$("[data-test-id=name] input").setValue("Иванов Иван Иванович");
         form.$("[data-test-id=phone] input").setValue("+79876543210");
         form.$("[data-test-id=agreement]").click();
