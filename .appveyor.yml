@@ -1,6 +1,4 @@
-image: Ubuntu
-
-stack: jdk 11
+image: Ubuntu1804
 
 branches:
   only:
@@ -17,4 +15,3 @@ build_script:
 
 on_finish:
   - ps: Stop-Process -Id $App.Id
-
