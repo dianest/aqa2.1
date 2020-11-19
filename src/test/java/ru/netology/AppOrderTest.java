@@ -20,9 +20,4 @@ public class AppOrderTest {
         form.$(By.tagName("BUTTON")).click();
         $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена!"));
     }
-
-    @Test
-    public void failingTest() {
-        throw new RuntimeException("You shall fail");
-    }
 }
