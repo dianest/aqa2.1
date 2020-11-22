@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -18,6 +19,6 @@ public class AppOrderTest {
         form.$("[data-test-id=phone] input").setValue("+79876543210");
         form.$("[data-test-id=agreement]").click();
         form.$(By.tagName("BUTTON")).click();
-        $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена!"));
+        $("[data-test-id=order-success]").shouldHave(Condition.text("Ваша заявка успешно отправлена!"));
     }
 }
